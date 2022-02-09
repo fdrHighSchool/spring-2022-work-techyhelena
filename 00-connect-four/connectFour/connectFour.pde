@@ -82,3 +82,12 @@ void keyPressed() {
   }
   
 } // end keyPressed method
+
+int rowPlay(int c) {
+  for(int r = 0; r < board.length; r++) {
+    if(!board[r][c].equals(" ")){
+      return r - 1; //one space above occupied
+    }
+  }
+  return board.length - 1;
+}
