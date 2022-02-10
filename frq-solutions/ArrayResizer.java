@@ -36,10 +36,10 @@ public class ArrayResizer {
   public static int[][] resize(int[][] array2D) {
     int[][] placeholder = new int[numNonZeroRows(array2D)][array2D[0].length];
     int temp = 0;
-    for (int r = 0; r < array2D.length;r++){
+    for (int r = 0; r < array2D.length; r++){
       if (isNonZeroRow(array2D, r)) {
-        for (int col = 0; col < array2D[0].length; col++) {
-          placeholder[temp][col] = array2D[r][col];
+        for (int c = 0; c < array2D[0].length; c++) {
+          placeholder[temp][c] = array2D[r][c];
         }
         temp++;
       }
