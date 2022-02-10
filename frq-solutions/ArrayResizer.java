@@ -1,4 +1,3 @@
-import java.util.*;
 public class ArrayResizer {
   public static void main(String[] args) {
     // int [][] arr = new int[4][3];
@@ -22,8 +21,8 @@ public class ArrayResizer {
   
   public static int numNonZeroRows(int[][] array2D) {
     int temp = 0;
-    for (int r = 0; r < array2D.length;r++) {
-      for (int c = 0; c < array2D[0].length;c++){
+    for (int r = 0; r < array2D.length; r++) {
+      for (int c = 0; c < array2D[0].length; c++){
         if (array2D[r][c] == 0) {
           temp++;
           break;
