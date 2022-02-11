@@ -29,5 +29,11 @@ public class studentData {
         String name5 = "Michael Green";
         boolean cc5 = true;
         int[] grades5 = {80, 80, 65, 55, 90};
+
+        student student1 = new student("1234567",
+                                       "Jimmy Smith",
+                                       true,
+                                       grades1
+                                       );
     } // closes main
 } // closes class
