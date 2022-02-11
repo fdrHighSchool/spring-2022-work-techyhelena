@@ -1,39 +1,50 @@
-public class student {
-// fields, instance variables (data)
+public class Student {
+  // fields, instance varaibles (data)
+  // each instance of the Student class gets a copy of each variable
   private String id;
   private String name;
   private boolean closeContact;
   private int[] grades;
 
-  // constructor method
-  // used to set up the default values
-  public student(String id, String n, String cc, int [] g) {
+  // constuctor method
+  public Student(String id, String n, boolean cc, int[] g) {
     this.id = id;
     this.name = n;
     this.closeContact = cc;
-    this.grades = g; 
+    this.grades = g;
   }
 
 
-  // behavior
-  public boolean isCloseContact() {
-    // create method that updates the status of a student being close contact
-    // chances are, the student may have a different status any other day
+  // behaviors (methods)
 
-  }
+  // get the close contact status of the student
+  public boolean getCloseContact() {
+    return this.closeContact;
+  } // end isCloseContact method
 
-  // set the valye of close contact
+  // set the value of close contact
   public void setCloseContact(boolean value) {
 
   }
 
-  // see if they're failing in class
+  // see if the student is failing
   public boolean isFailing() {
-    // average less than
+
+    return false;
   }
 
-  // get student's name
+  // get object's name value
   public String getName() {
-
+    return this.name;
   }
+
+  public double getAverage() {
+    int total = 0;
+
+    for (int grade : this.grades) {
+      total += grade;
+    } // end for-each loop
+    return total / grades.length;
+  } // end getAverage method
+
 }
