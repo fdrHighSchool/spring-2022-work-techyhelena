@@ -44,8 +44,6 @@ public class studentData {
       // getting student IDs
       System.out.println("Student 1's ID is: " + student1.getID());
       System.out.println("Student 5's ID is: " + student5.getID());
-
-
   
       // decision making based off of data attached to the object
       // if (student1.getCloseContact()) {
@@ -56,30 +54,55 @@ public class studentData {
       // }
 
       // changing the status of close contact 
-      
-      if(student1.setCloseContact(false)) {
+      if(student1.getCloseContact() == false) {
+        student1.setCloseContact(true);
         System.out.println(student1.getName() + ", You're now a close contact, please report to the auditorium for your take-home COVID test");
+      } 
+      else {
+        // student1.setCloseContact(true);
+        System.out.println(student1.getName() + ", You're now a close contact, please report to the auditorium for your take-home COVID test");
+
       }
       
-      if(student2.setCloseContact(false)) {
-        System.out.println(student2.getName() + ", You're now a close contact, please report to the auditorium for your take-home COVID test");
-      }
-
-      if(student3.setCloseContact(false)) {
-        System.out.println(student3.getName() + ", You're now a close contact, please report to the auditorium for your take-home COVID test");
-      }
-
-      if(student4.setCloseContact(false)) {
-        System.out.println(student4.getName() + ", You're now a close contact, please report to the auditorium for your take-home COVID test");
-      }
-
-      if(student5.setCloseContact(false)) {
-        System.out.println(student4.getName() + ", You're now a close contact, please report to the auditorium for your take-home COVID test");
-      }
-
+      if(student2.getCloseContact() == false) {
+        student1.setCloseContact(true);
+      } 
       else {
-        System.out.println("You are not a close contact, keep masking! Get boosted!");
+        student2.setCloseContact(true);
       }
+        System.out.println(student2.getName() + ", You're now a close contact, please report to the auditorium for your take-home COVID test");
+      
+
+        if(student3.getCloseContact() == false) {
+          student3.setCloseContact(true);
+        } 
+        else {
+          student3.setCloseContact(true);
+        }
+        System.out.println(student3.getName() + ", You're now a close contact, please report to the auditorium for your take-home COVID test");
+      
+
+        if(student4.getCloseContact() == false) {
+          student4.setCloseContact(true);
+        } 
+        else {
+          student4.setCloseContact(true);
+        }
+        System.out.println(student4.getName() + ", You're now a close contact, please report to the auditorium for your take-home COVID test");
+      
+
+        if(student5.getCloseContact() == false) {
+          student5.setCloseContact(true);
+        } 
+        else {
+          student5.setCloseContact(true);
+        }
+        System.out.println(student5.getName() + ", You're now a close contact, please report to the auditorium for your take-home COVID test");
+      
+
+      // else {
+      //   System.out.println("You are not a close contact, keep masking! Get boosted!");
+      // }
       
       
     } // end main method
