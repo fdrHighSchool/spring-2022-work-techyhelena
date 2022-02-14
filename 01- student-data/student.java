@@ -13,7 +13,6 @@ public class Student {
     this.grades = g;
   }
 
-
   // behaviors (methods)
 
   // get the close contact status of the student
@@ -22,20 +21,33 @@ public class Student {
   } // end isCloseContact method
 
   // set the value of close contact
-  public void setCloseContact(boolean value) {
-
-
+  // changing the status of close contact
+  public boolean setCloseContact(boolean value) {
+    if(value = false) {
+      this.closeContact = true;
+    }
+    else { // if true -> remain as true
+      return this.closeContact;
+    }
+    return this.closeContact;
   }
 
   // see if the student is failing
   public boolean isFailing() {
-
+    if(getAverage() < 65) {
+      return true;
+    }
     return false;
   }
 
   // get object's name value
   public String getName() {
     return this.name;
+  }
+
+  // get student id
+  public String getID() {
+    return this.id;
   }
 
   public double getAverage() {
