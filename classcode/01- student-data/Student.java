@@ -9,6 +9,7 @@ public class Student {
   // constuctor method
   public Student(String id, String n, boolean cc, int[] g) {
     this.id = id;
+    this.name = n;
     this.closeContact = cc;
     this.grades = g;
   }
@@ -21,12 +22,12 @@ public class Student {
   } // end isCloseContact method
 
   // set the value of close contact
-  // changing the status of close contact
+  // changing the status of close contact 
   public boolean setCloseContact(boolean value) {
     if(value = false) {
-      this.closeContact = true;
-    }
-    else { // if true -> remain as true
+      this.closeContact = true;  
+    } 
+    else if(value = true){ // if true -> remain as true
       return this.closeContact;
     }
     return this.closeContact;
@@ -58,9 +59,5 @@ public class Student {
     } // end for-each loop
     return total / grades.length;
   } // end getAverage method
-
-  public String toString() {
-    return this.name + ": " + this.id;
-  }
 
 }
