@@ -103,6 +103,7 @@ public class studentData {
       // else {
       //   System.out.println("You are not a close contact, keep masking! Get boosted!");
       // }
+      
 
 
     } // end main method
