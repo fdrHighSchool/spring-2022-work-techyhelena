@@ -20,14 +20,33 @@ public class MetroCard {
 
     // normal card
     public MetroCard(double t, double f, double b, double s) {
+        this.fee = f;
+        this.status = s;
+        this.balance = b;
 
+        // default values 
+        b = "5.50";
+        f = 2.75;
+        s = "Pay To Go";
     }
 
 
     // behaviors 
+    // 5:30 -> 20:30
     public void swipe() {
-        if(!t.equals("5:30")) {
+        if(s = "Student") {
+            if(t < 5.30 || t > 20.30) {
+            r = 0; 
+            System.out.println("Your card is invalid at this time.");
+            }
+            
+            else {
+                System.out.println("You have" + r + "rides left.");
+            }
+        }
 
+        if(s = "Pay to Go") {
+            
         }
     }
 
