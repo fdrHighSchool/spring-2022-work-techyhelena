@@ -20,16 +20,16 @@ public class MetroCard {
     }
 
     public void swipe() {
-        if(timeParts(this.time) < 530 || timeParts(this.time) > 2030 ) {
+        if(timeParts(this.time) < 530 || timeParts(this.time) > 2030 ) { // time limit during 5:30 AM to 8:30 PM
             System.out.println("You may not use your card during these hours.");
             this.rides = 0;
         }
         
-        else if(timeParts(this.time) == 0000) {
+        else if(timeParts(this.time) == 00) { // if midnight refresh # of rides
             this.rides = 3; 
         } 
 
-        else if(this.rides == 0) {
+        else if(this.rides == 0) { // 
             System.out.println("Insuffient rides available");
 
         }
@@ -56,7 +56,7 @@ public class MetroCard {
         // int lastColon = t.lastIndexOf(":");
 
         int hour = Integer.parseInt(t.substring(0, colon));
-        int min = Integer.parseInt(t.substring(colon + 1));
+        int min = Integer.parseInt(t.substring(colon + 1, 4));
         // int sec = Integer.parseInt(t.substring(lastColon + 1));
 
 
@@ -69,7 +69,7 @@ public class MetroCard {
         // int lastColon = this.time.lastIndexOf(":");
 
         int hour = Integer.parseInt(this.time.substring(0, colon));
-        int min = Integer.parseInt(this.time.substring(colon + 1));
+        int min = Integer.parseInt(this.time.substring(colon + 1, 4));
         // int sec = Integer.parseInt(this.time.substring(lastColon + 1));
         return "hour: " + hour + " min: " + min; 
         
