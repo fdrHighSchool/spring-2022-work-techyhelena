@@ -5,7 +5,7 @@ public class Tester {
         studentCard.swipe();
 
         System.out.println(studentCard.getRides());
-        System.out.println(studentCard.getTime("00:00"));
+        System.out.println(studentCard.getTime());
         
     }
 }
