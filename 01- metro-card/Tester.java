@@ -1,11 +1,11 @@
 public class Tester {
     public static void main(String[] args) {
-        MetroCard studentCard = new MetroCard("00:00");
+        MetroCard studentCard = new MetroCard("20:00");
 
         studentCard.swipe();
 
         System.out.println(studentCard.getRides());
         System.out.println(studentCard.getTime());
-        
+
     }
 }

@@ -1,7 +1,7 @@
 public class MetroCard {
-    // instance variables 
+    // instance variables
     // private String status;
-    // private double balance; 
+    // private double balance;
     private int rides;
     // private double fee;
     private String time;
@@ -15,32 +15,33 @@ public class MetroCard {
 
     public MetroCard(String t) {
         // this.status = s;
-        this.time = t;        
+        this.time = t;
         this.rides = 3;
     }
 
     public void swipe() {
-        if(timeParts(this.time) < 530 || timeParts(this.time) > 2030 ) { // time limit during 5:30 AM to 8:30 PM
+        if(this.rides == 0) { //if student has no rides
+            System.out.println("Insufficent rides available.");
+
+        }
+        else if(timeParts(this.time) < 530 || timeParts(this.time) > 2030 ) { // time limit during 5:30 AM to 8:30 PM
             System.out.println("You may not use your card during these hours.");
             this.rides = 0;
         }
-        
+
         else if(timeParts(this.time) == 00) { // if midnight refresh # of rides
-            this.rides = 3; 
-        } 
-
-        else if(this.rides == 0) { // 
-            System.out.println("Insuffient rides available");
-
+            this.rides = 3;
         }
 
         else {
             this.rides = this.rides--;
             System.out.println("You have " + this.rides + " rides remaining.");
         }
-        
-    }
-    
+
+
+
+    } // end swipe()
+
     // public double getBalance() {
     //     return this.balance;
     // }
@@ -60,7 +61,7 @@ public class MetroCard {
         // int sec = Integer.parseInt(t.substring(lastColon + 1));
 
 
-        return hour + min; 
+        return hour + min;
     }
 
     public String getTime() {
@@ -71,12 +72,14 @@ public class MetroCard {
         int hour = Integer.parseInt(this.time.substring(0, colon));
         int min = Integer.parseInt(this.time.substring(colon + 1, 4));
         // int sec = Integer.parseInt(this.time.substring(lastColon + 1));
-        return "hour: " + hour + " min: " + min; 
-        
+        return "hour: " + hour + " min: " + min;
+
     }
 
-    // public String toString() {
-    //     return
-    // }
+    /*
+     public String toString() {
+         return
+     }
+    */ 
 
 }
