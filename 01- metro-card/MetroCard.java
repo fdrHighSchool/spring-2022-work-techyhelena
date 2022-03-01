@@ -54,11 +54,9 @@ public class MetroCard {
     public int timeParts(String t) {
         this.time = t;
         int colon = t.indexOf(":");
-        // int lastColon = t.lastIndexOf(":");
 
         int hour = Integer.parseInt(t.substring(0, colon));
         int min = Integer.parseInt(t.substring(colon + 1, 4));
-        // int sec = Integer.parseInt(t.substring(lastColon + 1));
 
 
         return hour + min;
@@ -67,11 +65,9 @@ public class MetroCard {
     public String getTime() {
         // this.time = t;
         int colon = this.time.indexOf(":");
-        // int lastColon = this.time.lastIndexOf(":");
 
         int hour = Integer.parseInt(this.time.substring(0, colon));
         int min = Integer.parseInt(this.time.substring(colon + 1, 4));
-        // int sec = Integer.parseInt(this.time.substring(lastColon + 1));
         return "hour: " + hour + " min: " + min;
 
     }
