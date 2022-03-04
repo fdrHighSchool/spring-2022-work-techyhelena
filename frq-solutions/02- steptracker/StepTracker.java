@@ -12,21 +12,34 @@ public class StepTracker {
     }
 
     public void addDailySteps(int steps) {
-        // accumlates info about steps, in readings taken once per day
+        // adding steps based on input 
+        totalSteps = totalSteps + steps;
+        totalDays++; // updating days 
 
-
+        // determines whether or not steps are active 
+        // comparing user steps to the min steps required
+        if(steps >= minSteps) {
+            activeDays++; // update active days when statement is true
+        }
     }
 
     public int activeDays() {
         // returns the number of active days
-        
+        return activeDays; 
     }
 
+    public int totalDays() {
+        return totalDays;
+    }
+
+    public int totalSteps() {
+        return totalSteps;
+    }
 
     public double averageSteps() {
         // divide the total number of steps taken by the number of days tracked
         // if days and steps are 0
-        if(numDays == 0) {
+        if(totalDays == 0) {
           return 0.0;
         }
 
@@ -34,6 +47,8 @@ public class StepTracker {
           return (double)(totalSteps) / totalDays;
         }
     }
+
+
 
 
 }
