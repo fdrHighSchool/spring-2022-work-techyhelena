@@ -7,10 +7,13 @@ public class Cell {
 
     // constructor (blueprint)
     public Cell(int s) {
-      this.status;
+      this.status = s;
     }
 
-    public int
+    // getter methods 
+    public int getStatus() {
+      return this.status;
+    }
 
 
 }
