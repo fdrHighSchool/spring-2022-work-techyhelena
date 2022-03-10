@@ -16,15 +16,15 @@ public class Stimulation {
             }
           }
         }          
-        // fill board with random 1 and 0 to get it working 
 
+        // fill board with random 1 and 0 to get it working 
         // public static void showBoard(Cell[][] grid) {
         // }
 
         
 
         // make updateBoard method (next gen)
-        
+        // make a new array for the next gen 
         // String input = s.nextLine(); // to update screen
 
         // count neighbor method for each cell 
