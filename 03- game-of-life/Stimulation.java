@@ -23,13 +23,14 @@ public class Stimulation {
             for(int c = 0; c < grid[r].length; c++) {
               System.out.println(grid[r][c] + " ");
             }
-            System.out.println();
+            // System.out.println();
           }
          }
 
         // make updateBoard method (next gen)
 
         // String input = s.nextLine(); // to update screen
+        // make new array to make new gen
 
         // count neighbor method for each cell
         // will determine the status of the next gen
