@@ -24,8 +24,17 @@ public class Deck {
     }
   }
 
-  // make a shuffle method that could be used in the pile file
-  // player 1 and 2 can get their own pile
-  // 26 cards for each player 
+  public Card getIndex() {
+    for(Card c: this.deck) {
+      return c;
+    }
+  }
+
+  // loop all the indexes and then store new index in temp
+  // after use temp as the new index 
+  public int shuffle() {
+    int temp; 
+    return this.deck;
+  }
 
 } // end class

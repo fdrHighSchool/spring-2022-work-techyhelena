@@ -6,6 +6,9 @@ public class Driver {
     // create a deck for testing
     Deck deck1 = new Deck();
 
+    // different piles
+    // Pile p1 = new Pile();
+
     System.out.println(deck1.getLength()); // 52 cards in a standard deck
     deck1.displayDeck();
   }
