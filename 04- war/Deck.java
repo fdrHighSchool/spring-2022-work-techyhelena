@@ -1,3 +1,4 @@
+// REFER TO THIS SITE: https://books.trinket.io/thinkjava/chapter12.html
 import java.util.*;
 
 public class Deck {
@@ -24,7 +25,7 @@ public class Deck {
     }
   }
 
-  public Card getIndex() {
+  public Card getIndex() { // fix 
     for(Card c: this.deck) {
       return c;
     }
