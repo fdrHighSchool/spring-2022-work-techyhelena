@@ -1,3 +1,4 @@
+// REFER TO THIS SITE: https://books.trinket.io/thinkjava/chapter12.html
 import java.util.*;
 
 public class Deck {
@@ -24,8 +25,28 @@ public class Deck {
     }
   }
 
-  // make a shuffle method that could be used in the pile file
-  // player 1 and 2 can get their own pile
-  // 26 cards for each player 
+  public Card getIndex() { // fix
+    for(Card c: this.deck) {
+      return c;
+    }
+  }
+
+  // loop all the indexes and then store new index in temp
+  // after use temp as the new index
+  public void shuffle() {
+    // making new array list for shuffled deck
+    ArrayList<Card> shuffledDeck = new ArrayList<Card>();
+
+    for(int i = 0; i < 52; i++) {
+    // generate random number from 0 to 51 (.size() - 1)
+    // taking card away every time so the size will decrease
+    int random = (int)(Math.random() * (this.deck.size() - 1));
+
+    // add random value to shuffled deck
+    shuffledDeck.add(this.deck.get(random));
+    // remove random value from original deck
+    this.deck.remove(random);
+    }
+  }
 
 } // end class
