@@ -25,23 +25,16 @@ public class Deck {
     }
   }
 
-  public Card getIndex() { // fix
-    for(Card c: this.deck) {
-      return c;
-    }
-  }
-
   // loop all the indexes and then store new index in temp
   // after use temp as the new index
   public void shuffle() {
     // making new array list for shuffled deck
     ArrayList<Card> shuffledDeck = new ArrayList<Card>();
-
-    for(int i = 0; i < 52; i++) {
+    int size = this.deck.size();
+    for(int i = 0; i < size; i++) {
     // generate random number from 0 to 51 (.size() - 1)
     // taking card away every time so the size will decrease
     int random = (int)(Math.random() * (this.deck.size() - 1));
-
     // add random value to shuffled deck
     shuffledDeck.add(this.deck.get(random));
     // remove random value from original deck
