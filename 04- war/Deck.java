@@ -1,4 +1,4 @@
-// REFER TO THIS SITE: https://books.trinket.io/thinkjava/chapter12.html
+// REFER TO THIS SITE: https://books.trinket.io/thinkjava/chapte  r12.html
 import java.util.*;
 
 public class Deck {
@@ -40,6 +40,10 @@ public class Deck {
     // remove random value from original deck
     this.deck.remove(random);
     }
+  }
+
+  public int getValue() {
+    return this.value;
   }
 
 } // end class
